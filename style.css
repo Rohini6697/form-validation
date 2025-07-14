@@ -1,9 +1,10 @@
 .main{
-    /* border: 3px solid red; */
+    border: 3px solid red;
     display: flex;
     justify-content: center;
     height: 500px;
     padding-top: 50px;
+    
 }
 .first{
     background-color: rgb(110, 100, 215);
@@ -59,4 +60,15 @@ button{
     margin-left: 40px;
     border-radius: 10px;
     
+}
+@media (max-width:600px){
+   input{
+        max-width: 170px;
+   } 
+   .main{
+    /* width: 00px; */
+   }
+   button{
+    width: 100px;
+   }
 }
