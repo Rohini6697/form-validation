@@ -6,12 +6,14 @@ const valid=()=>{
 
     if(!user,!email,!pass,!cpass){
         alert('data incomplete')
+        
     }
 
     if(pass!==cpass){
         alert('Password not matching');
+       
     }
-    if(pass.lenght>6){
+    if(pass.length<=6){
         alert('password must be 6 character long')
     }
     if(!email.includes('@')){
