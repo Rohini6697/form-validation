@@ -57,9 +57,12 @@ button{
     height: 50px;
     color: white;
     border:none;
-    margin-left: 40px;
+    /* margin-left: 40px; */
     border-radius: 10px;
     
+}
+.form{
+    align-items: center;
 }
 @media (max-width:600px){
    input{
@@ -70,5 +73,12 @@ button{
    }
    button{
     width: 100px;
+    
+   }
+   .form{
+    align-items: center;
+   }
+   .form>div{
+    align-items: center;
    }
 }
