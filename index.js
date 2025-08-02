@@ -5,10 +5,10 @@ const valid=()=>{
     const cpass = document.getElementById('cpass').value;
 
     if(!user || !email || !pass || !cpass){
-        document.getElementById("use").innerHTML = 'data incomplete';
-        document.getElementById("demo").innerHTML = 'data incomplete';
-        document.getElementById("cp").innerHTML = 'data incomplete';
-        document.getElementById("pas").innerHTML = 'data incomplete';
+        document.getElementById("use").innerHTML = 'Data incomplete. All fields are mandatory';
+        document.getElementById("demo").innerHTML = 'Data incomplete. All fields are mandatory';
+        document.getElementById("cp").innerHTML = 'Data incomplete. All fields are mandatory';
+        document.getElementById("pas").innerHTML = 'Data incomplete. All fields are mandatory';
 
         document.getElementById("user").style.border ="3px solid red";
         document.getElementById("email").style.border ="3px solid red";
