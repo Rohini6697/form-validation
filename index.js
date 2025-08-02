@@ -4,17 +4,33 @@ const valid=()=>{
     const pass = document.getElementById('pass').value;
     const cpass = document.getElementById('cpass').value;
 
-    if(!user || !email || !pass || !cpass){
-        document.getElementById("use").innerHTML = 'Data incomplete. All fields are mandatory';
-        document.getElementById("demo").innerHTML = 'Data incomplete. All fields are mandatory';
-        document.getElementById("cp").innerHTML = 'Data incomplete. All fields are mandatory';
-        document.getElementById("pas").innerHTML = 'Data incomplete. All fields are mandatory';
+    // if(!user || !email || !pass || !cpass){
+    //     document.getElementById("use").innerHTML = 'Data incomplete. All fields are mandatory';
+    //     document.getElementById("demo").innerHTML = 'Data incomplete. All fields are mandatory';
+    //     document.getElementById("cp").innerHTML = 'Data incomplete. All fields are mandatory';
+    //     document.getElementById("pas").innerHTML = 'Data incomplete. All fields are mandatory';
 
-        document.getElementById("user").style.border ="3px solid red";
-        document.getElementById("email").style.border ="3px solid red";
-        document.getElementById("cpass").style.border ="3px solid red";
-        document.getElementById("pass").style.border ="3px solid red";
+    //     document.getElementById("user").style.border ="3px solid red";
+    //     document.getElementById("email").style.border ="3px solid red";
+    //     document.getElementById("cpass").style.border ="3px solid red";
+    //     document.getElementById("pass").style.border ="3px solid red";
         
+    //     return;
+    // }
+    if (!user) {
+        document.getElementById("use").innerHTML = 'Please fill the Username field!';
+        return;
+    }
+    if (!email) {
+        document.getElementById("demo").innerHTML = 'Please fill the Email field!';
+        return;
+    }
+    if (!pass) {
+        document.getElementById("pas").innerHTML = 'Please fill the Password field!';
+        return;
+    }
+    if (!cpass) {
+        document.getElementById("cp").innerHTML = 'Please Retype Password!';
         return;
     }
     if(user.length>=10){
