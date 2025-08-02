@@ -4,24 +4,57 @@ const valid=()=>{
     const pass = document.getElementById('pass').value;
     const cpass = document.getElementById('cpass').value;
 
-    if(!user,!email,!pass,!cpass){
-        alert('data incomplete')
+    if(!user || !email || !pass || !cpass){
+        document.getElementById("use").innerHTML = 'data incomplete';
+        document.getElementById("demo").innerHTML = 'data incomplete';
+        document.getElementById("cp").innerHTML = 'data incomplete';
+        document.getElementById("pas").innerHTML = 'data incomplete';
+
+        document.getElementById("user").style.border ="3px solid red";
+        document.getElementById("email").style.border ="3px solid red";
+        document.getElementById("cpass").style.border ="3px solid red";
+        document.getElementById("pass").style.border ="3px solid red";
         
+        return;
     }
+    if(user.length>=10){
+        document.getElementById("use").innerHTML = 'username must be less than 10 haracter';
+        
+    }  
+ 
 
     if(pass!==cpass){
-        alert('Password not matching');
+        document.getElementById('cp').innerHTML = 'password is not matching';
        
     }
     if(pass.length<=6){
-        alert('password must be 6 character long')
+        document.getElementById('pas').innerHTML = "password must be 6 character long";
     }
     if(!email.includes('@')){
-        alert('Email is not valid')
+    
+        document.getElementById('demo').innerHTML = 'incorrect email adress';
     }
     if(!user.match(/^[a-zA-Z0-9]+$/)){
-        alert('Username must be alpha numeric')
+        
+        document.getElementById('use').innerHTML = 'username must be alpha numeric';
     }
-
+    
     
 }
+document.getElementById("user").onclick = () =>{
+    document.getElementById("use").innerHTML = "";
+    document.getElementById("user").style.border ="1px solid black";
+};
+document.getElementById("email").onclick = () =>{
+    document.getElementById("demo").innerHTML = "";
+    document.getElementById("email").style.border ="1px solid black";
+};
+document.getElementById("pass").onclick = () =>{
+    document.getElementById("pas").innerHTML = "";
+    document.getElementById("pass").style.border ="1px solid black";
+
+};
+document.getElementById("cpass").onclick = () =>{
+    document.getElementById("cp").innerHTML = "";
+    document.getElementById("cpass").style.border ="1px solid black";
+};
